@@ -1,0 +1,130 @@
+<mujoco>
+
+	<!-- Right Arm -->
+	<body childclass="robot0:asset_class" name="robot0:r_roots">
+		<geom mesh="robot0:r_roots" mass="0.1" name="robot0:r_roots" material="robot_mat" class="robot0:visual"></geom>
+
+		<body name="robot0:r_base">
+			<geom mesh="robot0:r_base" mass="0.1" name="robot0:r_base" material="robot_mat" class="robot0:visual"></geom>
+
+			<body name="robot0:r_trunk">
+				<geom mesh="robot0:r_trunk" mass="0.1" name="robot0:r_trunk" material="robot_mat" class="robot0:visual"></geom>
+
+				<body name="robot0:r_hip">
+					<geom mesh="robot0:r_hip" mass="0.1" name="robot0:r_hip" material="robot_mat" class="robot0:visual"></geom>
+
+					<body name="robot0:r_body">
+						<geom mesh="robot0:r_body" mass="0.1" name="robot0:r_body" material="robot_mat" class="robot0:visual"></geom>
+						
+						<body name="robot0:r_shoulder">
+							<joint name="robot0:r_J1" type="hinge" axis="0 0 1" pos="0.125 -0.098 0.23" damping="0.5" armature="0.005" range="-1.5708 1.5708"/>
+							<geom class="robot0:visual" mass="0.001" name="robot0:r_shoulder" material="robot_mat" mesh="robot0:r_shoulder"></geom>
+							<body name="robot0:r_upper_arm">
+								<geom mesh="robot0:r_upper_arm" name="robot0:r_upper_arm" material="robot_mat" class="robot0:visual"></geom>
+	
+								<joint name="robot0:r_J2" type="hinge" axis="1 0 0" pos="0.16 -0.098 0.265" damping="0.5" armature="0.005" limited="false"/>
+								<body name="robot0:r_elbow">
+									<geom mesh="robot0:r_elbow" mass="0.001" name="robot0:r_elbow" material="robot_mat" class="robot0:visual"></geom>
+									
+									<joint name="robot0:r_J3" type="hinge" axis="0 1 0" pos="0.501 -0.13 0.271" damping="0.5" armature="0.005" range="-1.5708 1.5708"/>
+									<body name="robot0:r_forearm">
+										<geom mesh="robot0:r_forearm" mass="0.001" name="robot0:r_forearm" material="robot_mat" class="robot0:visual"></geom>
+										
+										<joint name="robot0:r_J4" type="hinge" axis="1 0 0" pos="0.515 -0.098 0.265" damping="0.5" armature="0.005" limited="false"/>
+										<body name="robot0:r_wrist">
+											<geom mesh="robot0:r_wrist" mass="0.001" name="robot0:r_wrist" material="robot_mat" class="robot0:visual"></geom>
+											
+											<joint name="robot0:r_J5" type="hinge" axis="0 1 0" pos="0.874 -0.13 0.268" damping="0.5" armature="0.005" range="-1.5708 1.5708"/>
+											<body name="robot0:r_hand">
+												<geom mesh="robot0:r_hand" mass="0.001" name="robot0:r_hand" material="robot_mat" class="robot0:visual"></geom>
+
+												<joint name="robot0:r_J6" type="hinge" axis="1 0 0" pos="0.9 -0.098 0.265" damping="0.5" armature="0.005" limited="false"/>
+
+												<body name="robot0:r_t_clamp">
+													<geom mesh="robot0:r_t_clamp" mass="0.001" name="robot0:r_t_clamp" condim="4" friction="1 0.05 0.01" material="robot_mat" class="robot0:visual"></geom>
+													<geom class="robot0:touch" name="robot0:C_r_t_clamp" type="capsule" pos="0.973 -0.099 0.275" size="0.01 0.01" euler="0 -1.5708 0" rgba="0.75 0.75 0.75 0"></geom>
+													<joint name="robot0:r_J7_up" type="hinge" axis="0 1 0" pos="0.93 -0.13 0.271" damping="0.5" armature="0.005" range="-0.34 0"/>
+												</body>
+
+												<body name="robot0:r_b_clamp">
+													<geom mesh="robot0:r_b_clamp" mass="0.001" name="robot0:r_b_clamp" condim="4" friction="1 0.05 0.01" material="robot_mat" class="robot0:visual"></geom>
+													<geom class="robot0:touch" name="robot0:C_r_b_clamp" type="capsule" pos="0.973 -0.099 0.255" size="0.01 0.01" euler="0 -1.5708 0" rgba="0.75 0.75 0.75 0"></geom>
+													<joint name="robot0:r_J7_bottom" type="hinge" axis="0 1 0" pos="0.93 -0.13 0.271" damping="0.5" armature="0.005" range="0 0.34"/>
+												</body>
+											</body>
+										</body>
+									</body>
+								</body>
+							</body>
+						</body>
+					</body>
+				</body>
+			</body>
+		</body>
+	</body>
+
+	<!-- Left Arm -->
+	<body childclass="robot0:asset_class" name="robot0:l_roots">
+		<geom mesh="robot0:l_roots" mass="0.1" name="robot0:l_roots" material="robot_mat" class="robot0:visual"></geom>
+
+		<body name="robot0:l_base">
+			<geom mesh="robot0:l_base" mass="0.1" name="robot0:l_base" material="robot_mat" class="robot0:visual"></geom>
+
+			<body name="robot0:l_trunk">
+				<geom mesh="robot0:l_trunk" mass="0.1" name="robot0:l_trunk" material="robot_mat" class="robot0:visual"></geom>
+
+				<body name="robot0:l_hip">
+					<geom mesh="robot0:l_hip" mass="0.1" name="robot0:l_hip" material="robot_mat" class="robot0:visual"></geom>
+
+					<body name="robot0:l_body">
+						<geom mesh="robot0:l_body" mass="0.1" name="robot0:l_body" material="robot_mat" class="robot0:visual"></geom>
+						
+						<body name="robot0:l_shoulder">
+							<joint name="robot0:l_J1" type="hinge" axis="0 0 1" pos="0.125 0.098 0.23" damping="0.5" armature="0.005" range="-1.5708 1.5708"/>
+							<geom class="robot0:visual" mass="0.001" name="robot0:l_shoulder" material="robot_mat" mesh="robot0:l_shoulder"></geom>
+							<body name="robot0:l_upper_arm">
+								<geom mesh="robot0:l_upper_arm" name="robot0:l_upper_arm" material="robot_mat" class="robot0:visual"></geom>
+								
+								<joint name="robot0:l_J2" type="hinge" axis="1 0 0" pos="0.16 0.098 0.265" damping="0.5" armature="0.005" limited="false"/>
+								<body name="robot0:l_elbow">
+									<geom mesh="robot0:l_elbow" mass="0.001" name="robot0:l_elbow" material="robot_mat" class="robot0:visual"></geom>
+									
+									<joint name="robot0:l_J3" type="hinge" axis="0 1 0" pos="0.501 0.08 0.271" damping="0.5" armature="0.005" range="-1.5708 1.5708"/>
+									<body name="robot0:l_forearm">
+										<geom mesh="robot0:l_forearm" mass="0.001" name="robot0:l_forearm" material="robot_mat" class="robot0:visual"></geom>
+										
+										<joint name="robot0:l_J4" type="hinge" axis="1 0 0" pos="0.515 0.098 0.265" damping="0.5" armature="0.005" limited="false"/>
+										<body name="robot0:l_wrist">
+											<geom mesh="robot0:l_wrist" mass="0.001" name="robot0:l_wrist" material="robot_mat" class="robot0:visual"></geom>
+											
+											<joint name="robot0:l_J5" type="hinge" axis="0 1 0" pos="0.874 0.08 0.268" damping="0.5" armature="0.005" range="-1.5708 1.5708"/>
+											<body name="robot0:l_hand">
+												<geom mesh="robot0:l_hand" mass="0.001" name="robot0:l_hand" material="robot_mat" class="robot0:visual"></geom>
+
+												<joint name="robot0:l_J6" type="hinge" axis="1 0 0" pos="0.9 0.098 0.265" damping="0.5" armature="0.005" limited="false"/>
+
+												<body name="robot0:l_t_clamp">
+													<geom mesh="robot0:l_t_clamp" mass="0.001" name="robot0:l_t_clamp" condim="4" friction="1 0.05 0.01" material="robot_mat" class="robot0:visual"></geom>
+													<geom class="robot0:touch" name="robot0:C_l_t_clamp" type="capsule" pos="0.973 0.099 0.275" size="0.01 0.01" euler="0 -1.5708 0" rgba="0.75 0.75 0.75 0"></geom>
+													<joint name="robot0:l_J7_up" type="hinge" axis="0 1 0" pos="0.93 0.08 0.271" damping="0.5" armature="0.005" range="-0.34 0"/>
+												</body>
+
+												<body name="robot0:l_b_clamp">
+													<geom mesh="robot0:l_b_clamp" mass="0.001" name="robot0:l_b_clamp" condim="4" friction="1 0.05 0.01" material="robot_mat" class="robot0:visual"></geom>
+													<geom class="robot0:touch" name="robot0:C_l_b_clamp" type="capsule" pos="0.973 0.099 0.255" size="0.01 0.01" euler="0 -1.5708 0" rgba="0.75 0.75 0.75 0"></geom>
+													<joint name="robot0:l_J7_bottom" type="hinge" axis="0 1 0" pos="0.93 0.08 0.271" damping="0.5" armature="0.005" range="0 0.34"/>
+												</body>
+											</body>
+										</body>
+									</body>
+								</body>
+							</body>
+						</body>
+					</body>
+				</body>
+			</body>
+		</body>
+	</body>
+
+
+</mujoco>

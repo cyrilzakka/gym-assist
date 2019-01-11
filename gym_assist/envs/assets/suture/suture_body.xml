@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+	<compiler angle="radian" coordinate="local" meshdir="../stls/clamp" texturedir="../textures"></compiler>
+	<option timestep="0.002" iterations="20" apirate="200">
+		<flag warmstart="enable"></flag>
+	</option>
+
+	<include file="shared.xml"></include>
+
+	<asset>
+		<include file="shared_asset.xml"></include>
+
+        <texture type="skybox" builtin="gradient" rgb1="0.94 0.97 0.97" rgb2="0.94 0.97 0.97" width="32" height="32"/>
+        <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2="0.18 0.25 0.29" width="612" height="612"/>
+        <texture name="texgeom" type="cube" builtin="flat" mark="none" width="127" height="1278" rgb1="0.95 0.95 0.95" rgb2="0.95 0.95 0.95" markrgb="1 1 1" random="0.01"/>
+
+		<material name="robot_mat" texture="texgeom" shininess="0.0" specular="0.0" reflectance="0"/>
+        <material name="floor_mat" specular="0" shininess="0.0" reflectance="0" texture="texplane" texrepeat="5 5"/>/>
+	</asset>
+
+	<worldbody>
+		<light directional="true" ambient="0.2 0.2 0.2" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" castshadow="false" pos="0 1 4" dir="0 0 -1" name="light0"></light>
+
+		<geom name="floor0" pos="0 0 0" size="1 1 1" type="plane" condim="3" material="floor_mat"></geom>
+		<body name="floor0" pos="1 1 0"></body>
+
+		<include file="robot.xml"></include>
+		<include file="needle.xml"></include>
+		
+		<body name="target0:in" pos="0.6 0 0.2">
+			<geom name="in" type="mesh" mesh="target0:hole" size="1 1" condim="1"></geom>
+			<site name="target0:in_center" pos="0 0 0" rgba="1 0 0 0" size="0.013"></site>
+		</body>
+
+		<body name="target0:out" pos="0.6 0.1 0.2">
+			<geom name="out" type="mesh" mesh="target0:hole" size="1 1" condim="1"></geom>
+			<site name="target0:out_center" pos="0 0 0" rgba="1 0 0 0" size="0.013"></site>
+		</body>
+
+	</worldbody>
+
+</mujoco>

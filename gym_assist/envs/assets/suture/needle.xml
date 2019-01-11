@@ -1,0 +1,174 @@
+<mujoco>
+	<body name="object:needle" pos="0.7 0 0">
+		<joint type="free" name="object:joint"/>
+		<geom name="object:handle" type="mesh" mesh="object0:needle_handle" size="1 1" mass="0.001" condim="1"></geom>
+		<geom name="object:first_curve" type="mesh" mesh="object0:needle_first_curve" mass="0.001" size="1 1" condim="1"></geom>
+		<geom name="object:second_curve" type="mesh" mesh="object0:needle_second_curve" mass="0.001" size="1 1" condim="1"></geom>
+		<geom name="object:tip" type="mesh" mesh="object0:needle_tip" size="1 1" mass="0.001" condim="1"></geom>
+
+		<!-- Rope for MuJoCo 2.0 -->
+		<!-- <body name="B0" pos="0.080 0.020 0">
+			<composite type="rope" count="30 1 1" spacing="0.027" offset="0 0 2">
+				<joint kind="main" damping="0.0025"/>
+				<geom type="capsule" size=".005 .01" rgba=".8 .2 .1 1"/>
+			</composite>
+		</body> -->
+
+		<!-- Rope for MuJoCo <= 1.5 -->
+		<body name="B_0">
+			<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.075 0.020 0"></joint>
+			<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.075 0.020 0"></joint>
+			<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.090 0.020 0" euler="0 1.5708 0"/>
+			<body name="B_1">
+				<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.105 0.020 0"></joint>
+				<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.105 0.020 0"></joint>
+				<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.12 0.020 0" euler="0 1.5708 0"/>
+				<body name="B_2">
+					<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.135 0.020 0"></joint>
+					<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.135 0.020 0"></joint>
+					<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.15 0.020 0" euler="0 1.5708 0"/>
+					<body name="B_3">
+						<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.165 0.020 0"></joint>
+						<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.165 0.020 0"></joint>
+						<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.18 0.020 0" euler="0 1.5708 0"/>
+						<body name="B_4">
+							<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.195 0.020 0"></joint>
+							<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.195 0.020 0"></joint>
+							<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.21 0.020 0" euler="0 1.5708 0"/>
+							<body name="B_5">
+								<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.225 0.020 0"></joint>
+								<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.225 0.020 0"></joint>
+								<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.24 0.020 0" euler="0 1.5708 0"/>
+								<body name="B_6">
+									<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.255 0.020 0"></joint>
+									<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.255 0.020 0"></joint>
+									<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.27 0.020 0" euler="0 1.5708 0"/>
+									<body name="B_7">
+										<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.285 0.020 0"></joint>
+										<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.285 0.020 0"></joint>
+										<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.30 0.020 0" euler="0 1.5708 0"/>
+										<body name="B_8">
+											<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.315 0.020 0"></joint>
+											<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.315 0.020 0"></joint>
+											<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.33 0.020 0" euler="0 1.5708 0"/>
+											<body name="B_9">
+												<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.335 0.020 0"></joint>
+												<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.335 0.020 0"></joint>
+												<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.36 0.020 0" euler="0 1.5708 0"/>
+												<body name="B_10">
+													<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.365 0.020 0"></joint>
+													<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.365 0.020 0"></joint>
+													<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.39 0.020 0" euler="0 1.5708 0"/>
+													<body name="B_11">
+														<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.395 0.020 0"></joint>
+														<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.395 0.020 0"></joint>
+														<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.42 0.020 0" euler="0 1.5708 0"/>
+														<body name="B_12">
+															<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.425 0.020 0"></joint>
+															<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.425 0.020 0"></joint>
+															<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.45 0.020 0" euler="0 1.5708 0"/>
+															<body name="B_13">
+																<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.455 0.020 0"></joint>
+																<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.455 0.020 0"></joint>
+																<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.48 0.020 0" euler="0 1.5708 0"/>
+																<body name="B_14">
+																	<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.485 0.020 0"></joint>
+																	<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.485 0.020 0"></joint>
+																	<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.51 0.020 0" euler="0 1.5708 0"/>
+																	<body name="B_15">
+																		<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.515 0.020 0"></joint>
+																		<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.515 0.020 0"></joint>
+																		<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.54 0.020 0" euler="0 1.5708 0"/>
+																		<body name="B_16">
+																			<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.545 0.020 0"></joint>
+																			<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.545 0.020 0"></joint>
+																			<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.57 0.020 0" euler="0 1.5708 0"/>
+																			<body name="B_17">
+																				<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.575 0.020 0"></joint>
+																				<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.575 0.020 0"></joint>
+																				<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.60 0.020 0" euler="0 1.5708 0"/>
+																				<body name="B_18">
+																					<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.605 0.020 0"></joint>
+																					<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.605 0.020 0"></joint>
+																					<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.63 0.020 0" euler="0 1.5708 0"/>
+																					<body name="B_19">
+																						<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.635 0.020 0"></joint>
+																						<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.635 0.020 0"></joint>
+																						<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.66 0.020 0" euler="0 1.5708 0"/>
+																						<body name="B_20">
+																							<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.665 0.020 0"></joint>
+																							<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.665 0.020 0"></joint>
+																							<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.69 0.020 0" euler="0 1.5708 0"/>
+																							<body name="B_21">
+																								<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.695 0.020 0"></joint>
+																								<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.695 0.020 0"></joint>
+																								<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.72 0.020 0" euler="0 1.5708 0"/>
+																								<body name="B_22">
+																									<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.725 0.020 0"></joint>
+																									<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.725 0.020 0"></joint>
+																									<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.75 0.020 0" euler="0 1.5708 0"/>
+																									<body name="B_23">
+																										<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.755 0.020 0"></joint>
+																										<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.755 0.020 0"></joint>
+																										<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.78 0.020 0" euler="0 1.5708 0"/>
+																										<body name="B_24">
+																											<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.785 0.020 0"></joint>
+																											<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.785 0.020 0"></joint>
+																											<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.81 0.020 0" euler="0 1.5708 0"/>
+																											<body name="B_25">
+																												<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.815 0.020 0"></joint>
+																												<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.815 0.020 0"></joint>
+																												<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.84 0.020 0" euler="0 1.5708 0"/>
+																												<body name="B_26">
+																													<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.845 0.020 0"></joint>
+																													<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.845 0.020 0"></joint>
+																													<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.87 0.020 0" euler="0 1.5708 0"/>
+																													<body name="B_27">
+																														<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.875 0.020 0"></joint>
+																														<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.875 0.020 0"></joint>
+																														<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.90 0.020 0" euler="0 1.5708 0"/>
+																														<body name="B_28">
+																															<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.905 0.020 0"></joint>
+																															<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.905 0.020 0"></joint>
+																															<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.93 0.020 0" euler="0 1.5708 0"/>
+																															<body name="B_29">
+																																<joint type="hinge" damping="0.0025" axis="0 1 0" pos="0.935 0.020 0"></joint>
+																																<joint type="hinge" damping="0.0025" axis="0 0 1" pos="0.935 0.020 0"></joint>
+																																<geom type="capsule" size="0.005 0.01" rgba=".8 .2 .1 1" mass="0.0001" pos="0.96 0.020 0" euler="0 1.5708 0"/>
+																															</body>
+																														</body>
+																													</body>
+																												</body>
+																											</body>
+																										</body>
+																									</body>
+																								</body>
+																							</body>
+																						</body>
+																					</body>
+																				</body>
+																			</body>
+																		</body>
+																	</body>
+																</body>
+															</body>
+														</body>
+													</body>
+												</body>
+											</body>
+										</body>
+									</body>
+								</body>
+							</body>
+						</body>
+					</body>
+				</body>
+			</body>
+		</body>
+
+		<site name="object:center" pos="0 -0.0225 0" rgba="1 0 0 0" size="0.0081"></site>
+		<site name="object:top" pos="-0.07 0.015 0" rgba="1 0 0 0" size="0.0081"></site>
+		<site name="object:bottom" pos="0.069 0.020 0" rgba="1 0 0 0" size="0.0081"></site>
+
+	</body>
+</mujoco>

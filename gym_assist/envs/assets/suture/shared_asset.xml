@@ -1,0 +1,36 @@
+<mujoco>
+        <mesh file="r_roots.stl" scale="0.1 0.1 0.1" name="robot0:r_roots"></mesh>
+	<mesh file="r_base.stl" scale="0.1 0.1 0.1" name="robot0:r_base"></mesh>
+        <mesh file="r_trunk.stl" scale="0.1 0.1 0.1" name="robot0:r_trunk"></mesh>
+	<mesh file="r_hip.stl" scale="0.1 0.1 0.1" name="robot0:r_hip"></mesh>
+        <mesh file="r_body.stl" scale="0.1 0.1 0.1" name="robot0:r_body"></mesh>
+        <mesh file="r_shoulder.stl" scale="0.1 0.1 0.1" name="robot0:r_shoulder"></mesh>
+        <mesh file="r_upper_arm.stl" scale="0.1 0.1 0.1" name="robot0:r_upper_arm"></mesh>
+        <mesh file="r_elbow.stl" scale="0.1 0.1 0.1" name="robot0:r_elbow"></mesh>
+        <mesh file="r_forearm.stl" scale="0.1 0.1 0.1" name="robot0:r_forearm"></mesh>
+        <mesh file="r_wrist.stl" scale="0.1 0.1 0.1" name="robot0:r_wrist"></mesh>
+        <mesh file="r_hand.stl" scale="0.1 0.1 0.1" name="robot0:r_hand"></mesh>
+	<mesh file="r_t_clamp.stl" scale="0.1 0.1 0.1" name="robot0:r_t_clamp"></mesh>
+        <mesh file="r_b_clamp.stl" scale="0.1 0.1 0.1" name="robot0:r_b_clamp"></mesh>
+
+        <mesh file="l_roots.stl" scale="0.1 0.1 0.1" name="robot0:l_roots"></mesh>
+        <mesh file="l_base.stl" scale="0.1 0.1 0.1" name="robot0:l_base"></mesh>
+        <mesh file="l_trunk.stl" scale="0.1 0.1 0.1" name="robot0:l_trunk"></mesh>
+        <mesh file="l_hip.stl" scale="0.1 0.1 0.1" name="robot0:l_hip"></mesh>
+        <mesh file="l_body.stl" scale="0.1 0.1 0.1" name="robot0:l_body"></mesh>
+        <mesh file="l_shoulder.stl" scale="0.1 0.1 0.1" name="robot0:l_shoulder"></mesh>
+        <mesh file="l_upper_arm.stl" scale="0.1 0.1 0.1" name="robot0:l_upper_arm"></mesh>
+        <mesh file="l_elbow.stl" scale="0.1 0.1 0.1" name="robot0:l_elbow"></mesh>
+        <mesh file="l_forearm.stl" scale="0.1 0.1 0.1" name="robot0:l_forearm"></mesh>
+        <mesh file="l_wrist.stl" scale="0.1 0.1 0.1" name="robot0:l_wrist"></mesh>
+        <mesh file="l_hand.stl" scale="0.1 0.1 0.1" name="robot0:l_hand"></mesh>
+        <mesh file="l_t_clamp.stl" scale="0.1 0.1 0.1" name="robot0:l_t_clamp"></mesh>
+        <mesh file="l_b_clamp.stl" scale="0.1 0.1 0.1" name="robot0:l_b_clamp"></mesh>
+
+        <mesh file="tip.stl" scale="0.1 0.1 0.1" name="object0:needle_tip"></mesh>
+        <mesh file="handle.stl" scale="0.1 0.1 0.1" name="object0:needle_handle"></mesh>
+        <mesh file="first_curve.stl" scale="0.1 0.1 0.1" name="object0:needle_first_curve"></mesh>
+        <mesh file="second_curve.stl" scale="0.1 0.1 0.1" name="object0:needle_second_curve"></mesh>
+
+        <mesh file="hole.stl" scale="0.1 0.1 0.1" name="target0:hole"></mesh>
+</mujoco>
