@@ -8,7 +8,7 @@ The environments are built using [MuJoCo](https://github.com/openai/mujoco-py#ob
 Clone this repository on your system and install Assist using the following commands:
 
     
-    git clone https://github.com/cyrilzakka/assist
+    git clone https://github.com/cyrilzakka/gym-assist
     cd gym-assist
     pip install -e .
     
@@ -35,8 +35,8 @@ Clone this repository on your system and install Assist using the following comm
           Cyrilzakka,
           author = {Zakka, Cyril},
           title = {Ingredients for Medical Robotics Research},
-          year = {2018},
+          year = {2019},
           publisher = {GitHub},
           journal = {GitHub repository},
-          howpublished = {\url{https://github.com/cyrilzakka/Assist}},
+          howpublished = {\url{https://github.com/cyrilzakka/gym-assist}},
     }
