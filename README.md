@@ -28,8 +28,8 @@ Clone this repository on your system and install Assist using the following comm
         env.step(env.action_space.sample()) #take a random action
     
     env.close()
-    
-When running the simulation, the environment can be configured to output a single frame corresponding to the laparoscope's current view of the environment, or a 16-dimensional vector corresponding to the (x, y, z) positions of the robotic arms' joints, relative to the global coordinate system. This versatility enables different styles of learning, ranging from [imitation-learning](https://openai.com/blog/robots-that-learn/){: .link-markdown} to [deep Q-learning](https://www.nature.com/articles/nature14236){: .link-markdown}.
+
+![alt text](https://cyrilzakka.github.io/assets/posts/post1/suture.jpg)
 
 
 ## Citation
